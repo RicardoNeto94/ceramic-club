@@ -1,65 +1,300 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="bg-[#F7F4EE] text-[#1D1D1D]">
+      {/* HERO */}
+
+      <section className="pt-36 pb-28">
+        <div className="mx-auto max-w-7xl px-8">
+          <div className="grid gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div>
+              <p className="mb-8 text-xs uppercase tracking-[0.45em] text-black/45">
+                Ceramics • Objects • Workshops
+              </p>
+
+              <h1 className="text-6xl font-light leading-[0.95] tracking-[-0.06em] md:text-8xl lg:text-9xl">
+                Inês
+                <br />
+                Rosado
+              </h1>
+
+              <p className="mt-10 max-w-md text-lg leading-relaxed text-black/65">
+                A ceramic studio exploring texture, ritual and material memory
+                through handcrafted objects and creative experiences.
+              </p>
+
+              <div className="mt-12 flex flex-wrap gap-4">
+                <Link
+                  href="/gallery"
+                  className="rounded-full border border-black/30 px-7 py-4 text-sm uppercase tracking-[0.16em] transition hover:border-black hover:bg-black hover:text-white"
+                >
+                  View Gallery
+                </Link>
+
+                <Link
+                  href="/book"
+                  className="rounded-full border border-black/10 bg-[#E8DED2] px-7 py-4 text-sm uppercase tracking-[0.16em] transition hover:bg-black hover:text-white"
+                >
+                  Book Workshop
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative lg:pl-10">
+              <div className="overflow-hidden rounded-[46%_54%_48%_52%/52%_42%_58%_48%]">
+                <img
+                  src="https://images.pexels.com/photos/4992465/pexels-photo-4992465.jpeg?auto=compress&cs=tinysrgb&w=2200"
+                  alt=""
+                  className="h-[620px] w-full object-cover"
+                />
+              </div>
+
+              <div className="absolute -bottom-8 left-0 max-w-xs rounded-[40px] bg-[#F7F4EE] px-8 py-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
+                <p className="text-xs uppercase tracking-[0.3em] text-black/40">
+                  Studio
+                </p>
+
+                <p className="mt-3 text-base leading-relaxed text-black/70">
+                  Handcrafted ceramics rooted in stillness, form and everyday
+                  rituals.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* COLLECTIONS */}
+
+      <section id="works" className="mx-auto max-w-7xl px-8 py-32">
+        <div className="mb-20 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+          <p className="text-xs uppercase tracking-[0.45em] text-black/45">
+            Collections
           </p>
+
+          <h2 className="max-w-3xl text-4xl font-light leading-tight tracking-[-0.04em] md:text-6xl">
+            Objects shaped by earth, hands and time.
+          </h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        <div className="grid gap-14 lg:grid-cols-2">
+          <Link href="/gallery" className="group block">
+            <div className="overflow-hidden rounded-[42px]">
+              <img
+                src="https://images.pexels.com/photos/3094215/pexels-photo-3094215.jpeg?auto=compress&cs=tinysrgb&w=2200"
+                alt=""
+                className="h-[620px] w-full object-cover transition duration-700 group-hover:scale-[1.025]"
+              />
+            </div>
+
+            <div className="mt-7 flex items-end justify-between border-b border-black/10 pb-6">
+              <div>
+                <p className="text-xs uppercase tracking-[0.3em] text-black/40">
+                  2026 Collection
+                </p>
+
+                <h3 className="mt-3 text-3xl font-light tracking-[-0.04em]">
+                  Terra
+                </h3>
+              </div>
+
+              <p className="text-xs uppercase tracking-[0.22em] text-black/45">
+                View
+              </p>
+            </div>
+          </Link>
+
+          <Link href="/gallery" className="group block lg:pt-20">
+            <div className="overflow-hidden rounded-[42px]">
+              <img
+                src="https://images.pexels.com/photos/4992472/pexels-photo-4992472.jpeg?auto=compress&cs=tinysrgb&w=2200"
+                alt=""
+                className="h-[540px] w-full object-cover transition duration-700 group-hover:scale-[1.025]"
+              />
+            </div>
+
+            <div className="mt-7 flex items-end justify-between border-b border-black/10 pb-6">
+              <div>
+                <p className="text-xs uppercase tracking-[0.3em] text-black/40">
+                  Studio Series
+                </p>
+
+                <h3 className="mt-3 text-3xl font-light tracking-[-0.04em]">
+                  Origins
+                </h3>
+              </div>
+
+              <p className="text-xs uppercase tracking-[0.22em] text-black/45">
+                View
+              </p>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+
+      <section className="mx-auto max-w-7xl px-8 py-32">
+        <div className="grid gap-16 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div className="overflow-hidden rounded-[55px]">
+            <img
+              src="https://images.pexels.com/photos/6612086/pexels-photo-6612086.jpeg?auto=compress&cs=tinysrgb&w=2200"
+              alt=""
+              className="h-[620px] w-full object-cover"
             />
-            Deploy Now
-          </a>
+          </div>
+
+          <div>
+            <p className="mb-8 text-xs uppercase tracking-[0.45em] text-black/45">
+              About the Studio
+            </p>
+
+            <h2 className="max-w-2xl text-4xl font-light leading-tight tracking-[-0.04em] md:text-6xl">
+              A quiet practice of material, gesture and memory.
+            </h2>
+
+            <p className="mt-9 max-w-xl text-lg leading-relaxed text-black/70">
+              Inês Rosado creates ceramic objects that explore the relationship
+              between functionality, texture and form. Each piece is shaped
+              through a slow process of observation, touch and experimentation.
+            </p>
+
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-black/70">
+              Her work is inspired by natural materials, everyday rituals and
+              the intimate presence of handmade objects in daily life.
+            </p>
+
+            <div className="mt-10 rounded-[32px] border border-black/10 px-6 py-5">
+              <p className="text-xs uppercase tracking-[0.25em] text-black/40">
+                Inês Rosado
+              </p>
+
+              <p className="mt-2 text-base text-black/65">
+                Ceramic Artist • Portimão, Portugal
+              </p>
+            </div>
+
+            <Link
+              href="/about"
+              className="mt-10 inline-block rounded-full border border-black/25 px-7 py-4 text-sm uppercase tracking-[0.16em] transition hover:border-black hover:bg-black hover:text-white"
+            >
+              Read More
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* WORKSHOP EXPERIENCE */}
+
+      <section className="mx-auto max-w-7xl px-8 py-32">
+        <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div>
+            <p className="mb-8 text-xs uppercase tracking-[0.45em] text-black/45">
+              Workshop Experience
+            </p>
+
+            <h2 className="max-w-xl text-4xl font-light leading-tight tracking-[-0.04em] md:text-6xl">
+              Learn through clay, process and presence.
+            </h2>
+
+            <p className="mt-9 max-w-md text-lg leading-relaxed text-black/70">
+              Workshops introduce participants to the creative process of
+              working with clay through hand-building, texture, form and
+              personal expression.
+            </p>
+
+            <Link
+              href="/book"
+              className="mt-10 inline-block rounded-full border border-black/25 bg-[#E8DED2] px-7 py-4 text-sm uppercase tracking-[0.16em] transition hover:border-black hover:bg-black hover:text-white"
+            >
+              Book Workshop
+            </Link>
+          </div>
+
+          <div className="overflow-hidden rounded-[48%_52%_42%_58%/44%_56%_44%_56%]">
+            <img
+              src="https://images.pexels.com/photos/5708106/pexels-photo-5708106.jpeg?auto=compress&cs=tinysrgb&w=2200"
+              alt=""
+              className="h-[640px] w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* STUDIO MOMENTS */}
+
+      <section className="mx-auto max-w-7xl px-8 py-32">
+        <div className="mb-14 flex flex-col justify-between gap-8 md:flex-row md:items-end">
+          <div>
+            <p className="mb-4 text-xs uppercase tracking-[0.45em] text-black/45">
+              Follow Along
+            </p>
+
+            <h2 className="text-4xl font-light leading-tight tracking-[-0.04em] md:text-6xl">
+              Studio moments.
+            </h2>
+          </div>
+
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#"
+            className="text-xs uppercase tracking-[0.25em] text-black/55 transition hover:text-black"
           >
-            Documentation
+            @inesrosado.studio
           </a>
         </div>
-      </main>
-    </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="overflow-hidden rounded-[36px]">
+            <img
+              src="https://images.pexels.com/photos/6195125/pexels-photo-6195125.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt=""
+              className="h-[390px] w-full object-cover"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-[36px] md:mt-14">
+            <img
+              src="https://images.pexels.com/photos/4992470/pexels-photo-4992470.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt=""
+              className="h-[460px] w-full object-cover"
+            />
+          </div>
+
+          <div className="overflow-hidden rounded-[36px]">
+            <img
+              src="https://images.pexels.com/photos/3094215/pexels-photo-3094215.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt=""
+              className="h-[390px] w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+
+      <section className="mx-auto max-w-5xl px-8 py-32 text-center">
+        <p className="mb-6 text-xs uppercase tracking-[0.45em] text-black/45">
+          Contact
+        </p>
+
+        <h2 className="text-5xl font-light leading-tight tracking-[-0.05em] md:text-7xl">
+          Let's create
+          <br />
+          something together.
+        </h2>
+
+        <p className="mx-auto mt-8 max-w-xl text-lg leading-relaxed text-black/70">
+          For commissions, collaborations, workshops and private events.
+        </p>
+
+        <Link
+          href="/contact"
+          className="mt-10 inline-block rounded-full border border-black/25 px-7 py-4 text-sm uppercase tracking-[0.16em] transition hover:border-black hover:bg-black hover:text-white"
+        >
+          Contact Studio
+        </Link>
+      </section>
+    </main>
   );
 }
