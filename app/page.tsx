@@ -13,11 +13,11 @@ export default function Home() {
                 Ceramics • Objects • Workshops
               </p>
 
-              <h1 className="text-6xl font-light leading-[0.95] tracking-[-0.06em] md:text-8xl lg:text-9xl">
-                Inês
-                <br />
-                Rosado
-              </h1>
+              <h1 className="font-editorial text-6xl font-normal leading-[0.9] tracking-[-0.04em] md:text-8xl lg:text-9xl">
+  Inês
+  <br />
+  Rosado
+</h1>
 
               <p className="mt-10 max-w-md text-lg leading-relaxed text-black/65">
                 A ceramic studio exploring texture, ritual and material memory
