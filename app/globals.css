@@ -246,3 +246,18 @@ nav a:hover::after {
 ::-webkit-scrollbar-thumb:hover {
   background: #b9b0a3;
 }
+@layer base {
+  html {
+    font-family: var(--font-geist), sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-editorial {
+    font-family: var(--font-sk-moralist), serif;
+  }
+
+  .font-sans {
+    font-family: var(--font-geist), sans-serif;
+  }
+}
