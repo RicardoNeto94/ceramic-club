@@ -1,11 +1,22 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import localFont from "next/font/local";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
 import "./globals.css";
 
 const geist = Geist({
   subsets: ["latin"],
+  variable: "--font-geist",
+  display: "swap",
+});
+
+const skMoralist = localFont({
+  src: "../public/fonts/SKMoralist-Regular.woff2",
+  weight: "400",
+  style: "normal",
+  variable: "--font-sk-moralist",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -20,8 +31,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={geist.className}>
-      <body>
+    <html
+      lang="en"
+      className={`${geist.variable} ${skMoralist.variable}`}
+    >
+      <body className={geist.className}>
         <Navbar />
 
         {children}
@@ -30,7 +44,9 @@ export default function RootLayout({
           <div className="mx-auto max-w-7xl px-8 py-20">
             <div className="grid gap-14 md:grid-cols-[1.4fr_0.8fr_0.8fr_1fr]">
               <div>
-                <h3 className="text-lg font-light uppercase tracking-[0.24em]">
+                <h3
+                  className={`${skMoralist.className} text-4xl font-normal leading-none`}
+                >
                   Inês Rosado
                 </h3>
 
@@ -81,9 +97,11 @@ export default function RootLayout({
 
                 <div className="flex flex-col gap-3 text-sm text-black/65">
                   <p>Portimão, Portugal</p>
+
                   <a href="mailto:hello@inesrosado.com">
                     hello@inesrosado.com
                   </a>
+
                   <a href="#" target="_blank" rel="noreferrer">
                     @inesrosado.studio
                   </a>
@@ -93,8 +111,13 @@ export default function RootLayout({
 
             <div className="mt-16 flex flex-col justify-between gap-5 border-t border-black/10 pt-8 text-xs uppercase tracking-[0.18em] text-black/45 md:flex-row">
               <p>
-                © {new Date().getFullYear()} Inês Rosado Studio. All rights
-                reserved.
+                © {new Date().getFullYear()}{" "}
+                <span
+                  className={`${skMoralist.className} text-base normal-case tracking-normal`}
+                >
+                  Inês Rosado
+                </span>{" "}
+                Studio. All rights reserved.
               </p>
 
               <div className="flex gap-6">
