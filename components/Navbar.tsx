@@ -15,11 +15,12 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 bg-[#F7F4EE]/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
         <Link
-          href="/"
-          className="text-base font-light uppercase tracking-[0.22em] text-black transition hover:text-black/60"
-        >
-          Inês Rosado
-        </Link>
+  href="/"
+  style={{ fontFamily: "var(--font-sk-moralist)" }}
+  className="text-3xl font-normal tracking-normal text-black transition hover:text-black/60"
+>
+  Inês Rosado
+</Link>
 
         <nav className="hidden items-center gap-7 text-xs uppercase tracking-[0.18em] md:flex">
           <Link href="/" className={linkClass("/")}>
