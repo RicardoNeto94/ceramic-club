@@ -9,7 +9,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-8">
           <div className="grid gap-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
-              <p className="mb-8 text-xs uppercase tracking-[0.45em] text-black/45">
+              <p className="mb-8 text-xs uppercase tracking-[0.25em] text-black/45">
                 Ceramics • Objects • Workshops
               </p>
 
@@ -50,16 +50,7 @@ export default function Home() {
                 />
               </div>
 
-              <div className="absolute -bottom-8 left-0 max-w-xs rounded-[40px] bg-[#F7F4EE] px-8 py-6 shadow-[0_20px_60px_rgba(0,0,0,0.06)]">
-                <p className="text-xs uppercase tracking-[0.3em] text-black/40">
-                  Studio
-                </p>
-
-                <p className="mt-3 text-base leading-relaxed text-black/70">
-                  Handcrafted ceramics rooted in stillness, form and everyday
-                  rituals.
-                </p>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -69,11 +60,11 @@ export default function Home() {
 
       <section id="works" className="mx-auto max-w-7xl px-8 py-32">
         <div className="mb-20 grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-          <p className="text-xs uppercase tracking-[0.45em] text-black/45">
+          <p className="text-xs uppercase tracking-[0.25em] text-black/45">
             Collections
           </p>
 
-          <h2 className="max-w-3xl text-4xl font-light leading-tight tracking-[-0.04em] md:text-6xl">
+          <h2 className="font-editorial max-w-3xl text-5xl leading-[0.95] md:text-7xl">
             Objects shaped by earth, hands and time.
           </h2>
         </div>
@@ -94,7 +85,7 @@ export default function Home() {
                   2026 Collection
                 </p>
 
-                <h3 className="mt-3 text-3xl font-light tracking-[-0.04em]">
+                <h3 className="font-editorial mt-3 text-4xl">
                   Terra
                 </h3>
               </div>
@@ -120,7 +111,7 @@ export default function Home() {
                   Studio Series
                 </p>
 
-                <h3 className="mt-3 text-3xl font-light tracking-[-0.04em]">
+                <h3 className="font-editorial mt-3 text-4xl">
                   Origins
                 </h3>
               </div>
@@ -146,11 +137,11 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="mb-8 text-xs uppercase tracking-[0.45em] text-black/45">
+            <p className="mb-8 text-xs uppercase tracking-[0.25em] text-black/45">
               About the Studio
             </p>
 
-            <h2 className="max-w-2xl text-4xl font-light leading-tight tracking-[-0.04em] md:text-6xl">
+            <h2 className="font-editorial max-w-2xl text-5xl leading-[1] md:text-7xl">
               A quiet practice of material, gesture and memory.
             </h2>
 
@@ -166,9 +157,7 @@ export default function Home() {
             </p>
 
             <div className="mt-10 rounded-[32px] border border-black/10 px-6 py-5">
-              <p className="text-xs uppercase tracking-[0.25em] text-black/40">
-                Inês Rosado
-              </p>
+              <p className="font-editorial text-3xl">Inês Rosado</p>
 
               <p className="mt-2 text-base text-black/65">
                 Ceramic Artist • Portimão, Portugal
@@ -190,11 +179,11 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-8 py-32">
         <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <div>
-            <p className="mb-8 text-xs uppercase tracking-[0.45em] text-black/45">
+            <p className="mb-8 text-xs uppercase tracking-[0.25em] text-black/45">
               Workshop Experience
             </p>
 
-            <h2 className="max-w-xl text-4xl font-light leading-tight tracking-[-0.04em] md:text-6xl">
+            <h2 className="font-editorial max-w-xl text-5xl leading-[1] md:text-7xl">
               Learn through clay, process and presence.
             </h2>
 
@@ -227,11 +216,11 @@ export default function Home() {
       <section className="mx-auto max-w-7xl px-8 py-32">
         <div className="mb-14 flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.45em] text-black/45">
+            <p className="mb-4 text-xs uppercase tracking-[0.25em] text-black/45">
               Follow Along
             </p>
 
-            <h2 className="text-4xl font-light leading-tight tracking-[-0.04em] md:text-6xl">
+            <h2 className="font-editorial text-5xl md:text-7xl">
               Studio moments.
             </h2>
           </div>
@@ -274,11 +263,11 @@ export default function Home() {
       {/* CONTACT */}
 
       <section className="mx-auto max-w-5xl px-8 py-32 text-center">
-        <p className="mb-6 text-xs uppercase tracking-[0.45em] text-black/45">
+        <p className="mb-6 text-xs uppercase tracking-[0.25em] text-black/45">
           Contact
         </p>
 
-        <h2 className="text-5xl font-light leading-tight tracking-[-0.05em] md:text-7xl">
+        <h2 className="font-editorial text-6xl leading-[0.95] md:text-8xl">
           Let's create
           <br />
           something together.
