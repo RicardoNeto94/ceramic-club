@@ -12,15 +12,14 @@ export default function Navbar() {
     }`;
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-[#F7F4EE]/85 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-black/[0.04] bg-[#F7F4EE]/85 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-8">
         <Link
-  href="/"
-  style={{ fontFamily: "var(--font-sk-moralist)" }}
-  className="text-3xl font-normal tracking-normal text-black transition hover:text-black/60"
->
-  Inês Rosado
-</Link>
+          href="/"
+          className="font-editorial text-[1.75rem] leading-none text-black transition-opacity duration-300 hover:opacity-60 md:text-[2rem]"
+        >
+          Inês Rosado Ceramic Studio
+        </Link>
 
         <nav className="hidden items-center gap-7 text-xs uppercase tracking-[0.18em] md:flex">
           <Link href="/" className={linkClass("/")}>
@@ -45,7 +44,7 @@ export default function Navbar() {
 
           <Link
             href="/book"
-            className={`rounded-full border px-5 py-2.5 transition ${
+            className={`rounded-full border px-5 py-2.5 transition-all duration-300 ${
               pathname === "/book"
                 ? "border-black bg-black text-white"
                 : "border-black/15 bg-[#E8DED2] text-black/70 hover:border-black hover:bg-black hover:text-white"
